@@ -21,7 +21,7 @@ repositories {
 
 docker {
         name "OnlineElectronicStore"
-        dockerfile file('src/Docker/dockerfile')
+        dockerfile file('src/Dockerfile')
         copySpec.from(jar).rename(".*","app.jar")
         buildArgs(['JAR_FILE': "app.jar"])
 }
